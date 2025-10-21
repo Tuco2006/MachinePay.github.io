@@ -26,31 +26,27 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-  
-      # 1. Configura o Node.js e o cache
+
       - name: Setup Node.js Environment
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20' # MUDANÇA PARA OBRIGAR O USO DA VERSÃO COMPATÍVEL
           cache: 'npm'
-  
-      # 2. Instala todas as dependências
+
       - name: Install Dependencies
         run: npm install
-  
-      # 3. Roda o Build (A CORREÇÃO ESTÁ AQUI)
+
+      # CORREÇÃO: Usar o script estável do package.json (que agora é 'npx vite build')
       - name: Run Vite Build
-        run: npx vite build 
+        run: npm run build
       
-      # 4. Configura as Páginas
       - name: Setup Pages
         uses: actions/configure-pages@v5
-  
-      # 5. Prepara o artefato de deploy
+
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './dist' 
 
   # Job 2: Deploy (Publicação)
   deploy:
