@@ -1,4 +1,3 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Deploy Vite/React Site
 
 on:
@@ -21,46 +20,46 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Este job faz o build (compilação) do seu projeto Vite
+  # Job 1: Build (Compilação)
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Configura o ambiente Node.js
-      - name: Setup Node.js
+      # 1. Configura o Node.js e o cache
+      - name: Setup Node.js Environment
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Versão estável
-          cache: 'npm' # Habilita cache do npm para velocidade
+          node-version: '20' 
+          cache: 'npm' 
 
-      # Instala todas as dependências (Tailwind, PostCSS, Vite)
+      # 2. Instala todas as dependências (incluindo Tailwind e PostCSS)
       - name: Install Dependencies
         run: npm install
 
-      # Roda o comando de build (vite build) que cria a pasta 'dist'
-      - name: Run Build
+      # 3. Roda o Build (Cria a pasta 'dist' com o Tailwind compilado)
+      - name: Run Vite Build
         run: npm run build
       
-      # Move a pasta 'dist' (o resultado compilado) para o próximo job
+      # 4. Configura as Páginas
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # Prepara o artefato de deploy (a pasta dist)
-      - name: Upload Artifact
+      # 5. Prepara o artefato de deploy (a pasta dist)
+      - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # É crucial que o path seja a pasta de saída do build
+          # É CRUCIAL que o path seja a pasta de saída do build do Vite
           path: './dist' 
 
-  # Este job pega o artefato e o publica no Pages
+  # Job 2: Deploy (Publicação)
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build # Garante que só roda depois que o build for concluído
+    needs: build # Garante que só roda se o build foi concluído com sucesso
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
