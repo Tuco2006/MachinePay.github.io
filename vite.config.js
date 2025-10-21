@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // 👈 isso é o mais importante
+  base: '/MachinePay.github.io/', // 👈 coloque exatamente o nome do seu repositório aqui
 })
