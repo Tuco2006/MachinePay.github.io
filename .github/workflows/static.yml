@@ -26,32 +26,31 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
+  
       # 1. Configura o Node.js e o cache
       - name: Setup Node.js Environment
         uses: actions/setup-node@v4
         with:
-          node-version: '20' 
-          cache: 'npm' 
-
-      # 2. Instala todas as dependências (incluindo Tailwind e PostCSS)
+          node-version: '20'
+          cache: 'npm'
+  
+      # 2. Instala todas as dependências
       - name: Install Dependencies
         run: npm install
-
-      # 3. Roda o Build (Cria a pasta 'dist' com o Tailwind compilado)
+  
+      # 3. Roda o Build (A CORREÇÃO ESTÁ AQUI)
       - name: Run Vite Build
-        run: npm run build
+        run: npx vite build 
       
       # 4. Configura as Páginas
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
-      # 5. Prepara o artefato de deploy (a pasta dist)
+  
+      # 5. Prepara o artefato de deploy
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # É CRUCIAL que o path seja a pasta de saída do build do Vite
-          path: './dist' 
+          path: './dist'
 
   # Job 2: Deploy (Publicação)
   deploy:
