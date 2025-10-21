@@ -5,33 +5,38 @@ const steps = [
   {
     number: 1,
     title: 'Desembalando e Verificando',
-    description: 'Abra a caixa com cuidado e certifique-se de que todos os itens estão presentes: máquina Paymas, cabo de energia, rolo de papel e manual de garantia.',
+    description: 'Abra a caixa com cuidado e certifique-se de que todos os itens estão presentes: Machine Pay, chicote de instalação, adesivo pix e qr code pix, maquininha de cartão e carregador da mesma.',
   },
   {
     number: 2,
     title: 'Conexão de Energia',
-    description: 'Conecte o cabo de energia na máquina e em uma tomada. Pressione e segure o botão de liga/desliga para iniciar o equipamento.',
+    description: 'Conecte o chicote enviado (duas pontas, uma macho e outra fêmea), retire o chicote original do moedeiro, conecete este no fêmea da machine pay e o macho da machine pay conecte onde estava o original do moedeiro.',
   },
   {
     number: 3,
-    title: 'Configuração de Rede (Wi-Fi/Chip)',
-    description: 'No menu inicial, selecione "Configurações de Rede". Escolha sua rede Wi-Fi e insira a senha, ou verifique se o chip de dados já está ativo.',
+    title: 'Fiação dos Cabos do Chicote',
+    description: 'Se for o caso da sua Machine Pay vir sem chicote apenas ligue cada fio com outro de cor correspondente que saia do chicote do moedeiro (vermelho com vermelho, branco com branco, preto com preto)',
   },
   {
     number: 4,
-    title: 'Primeira Transação de Teste',
-    description: 'Realize uma transação de teste com um valor simbólico (Ex: R$ 0,01) para garantir que a comunicação com o servidor e a impressão do comprovante estão funcionando corretamente.',
+    title: 'Carregador da Maquininha de cartão',
+    description: 'O carregador da maquininha de cartão deve sair da machine pay e se conectar à maquininha de cartão, ele é um cabo usb, então se já estiver ligado à maquininha de cartão apenas ligue o usb na machine pay.',
   },
   {
     number: 5,
-    title: 'Personalização Final',
-    description: 'Acesse o portal do lojista para configurar taxas, dados da loja e definir seus métodos de pagamento preferenciais. Sua Paymas está pronta para uso!',
+    title: 'Wi-Fi e ID',
+    description: 'Entre nas configurações do seu celular e vá em Wi-Fi, busque a rede com nome Machine-Pay e clique nela, entre com a senha 01012024 e clique em OPÇÕES / SENHA para criar sua senha, depois vá em configurações e faça a conexão dela ao Wi-Fi e ao ID da sua maquininha.',
+  },
+  {
+    number: 6,
+    title: 'Maquininha de Cartão',
+    description: 'A maquininha de cartão precisa ser configurada ao seu mercado pago, leia o QR code que aparece nela após conectá-la ao Wi-Fi e escolha o caixa referente à esta Machine Pay.',
   },
 ];
 
 const Manual = () => {
   return (
-    <div className="min-h-screen pt-24 bg-gray-50">
+    <div className="min-h-screen pt-24 bg-gradient-to-r from-orange-500 to-purple-600 pb-12 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-gray-900 mb-3 animate-slideInLeft">

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="pt-16">
+    <div className="pt-16 ">
       {/* Hero Section */}
       <header className="py-20 bg-gradient-to-r from-orange-500 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

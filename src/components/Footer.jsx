@@ -7,13 +7,13 @@ const Footer = () => {
   const videoSource = localVideo; 
 
   return (
-    <footer className="bg-gray-800 text-white mt-12 pt-12 pb-8">
+    <footer className="bg-black text-white pt-12 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" items-center">
           
           {/* Informações do Rodapé (mantidas) */}
           <div>
-            <h4 className="text-2xl font-bold text-indigo-400 mb-4">Veja em Ação</h4>
+            <h4 className="text-2xl font-bold text-indigo-400 mb-4">Vídeo Tutorial:</h4>
           </div>
 
           {/* Player de Vídeo HTML5 (Corrigido para Importação Local) */}

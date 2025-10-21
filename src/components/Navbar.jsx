@@ -22,7 +22,7 @@ export default function Navbar() {
             <img 
               src={PaymasLogoImage} // <--- A variável importada
               alt="Machine Paymas Logo" 
-              className="h-8 object-contain transition duration-300 ease-in-out transform hover:scale-105" // Ajuste o h-8 se a logo for muito alta
+              className="h-10 object-contain transition duration-300 ease-in-out transform hover:scale-105" // Ajuste o h-8 se a logo for muito alta
             />
           </Link>
 
@@ -32,7 +32,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 to={item.to}
-                className="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out relative group"
+                className="text-orange-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out relative group"
               >
                 {item.name}
                 {/* Linha de hover com animação */}
