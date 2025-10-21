@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     './index.html',
-    // CORRIGIDO: Deve ser **/* para pegar todos os subdiretórios (componentes, pages, etc.)
+    // CORRIGIDO: Esta é a sintaxe correta para escanear subdiretórios
     './src/**/*.{js,ts,jsx,tsx}', 
   ],
   theme: {
