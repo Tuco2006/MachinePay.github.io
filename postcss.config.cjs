@@ -1,7 +1,7 @@
 // postcss.config.cjs
 module.exports = {
   plugins: {
-    'tailwindcss': {},
+    'tailwindcss': {}, // Use aspas simples
     'autoprefixer': {},
   }
 };
