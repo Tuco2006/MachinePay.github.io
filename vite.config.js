@@ -1,13 +1,12 @@
 // vite.config.js
 
-// Mude de: import { defineConfig } from 'vite'
-// Para:
-import { defineConfig } from './node_modules/vite/dist/node.mjs' 
-// ou, o mais simples:
-// import { defineConfig } from 'vite';
+// REVERTA ESTA LINHA PARA O PADRÃO:
+import { defineConfig } from 'vite' 
 
-// O erro sugere que a importação do plugin também está com problemas.
+// (Em vez de: import { defineConfig } from './node_modules/vite/dist/node.mjs')
+
 import react from '@vitejs/plugin-react'
+// ... o resto do seu arquivo ...
 
 // ... continue com o resto do arquivo
 // NÃO PRECISA IMPORTAR NADA RELACIONADO AO TAILWIND AQUI
