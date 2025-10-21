@@ -1,8 +1,7 @@
-// postcss.config.cjs (Sintaxe de Objeto CommonJS)
-
+// postcss.config.cjs
 module.exports = {
-  plugins: {
-    'tailwindcss': {},
-    'autoprefixer': {},
-  }
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ],
 };
