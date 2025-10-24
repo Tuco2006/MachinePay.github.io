@@ -1,13 +1,6 @@
-# CP2 WebDev
+# Machine Pay Manual
 
-Repositório base para CP2 de WebDev
+Manual de instalação virtual da machine pay, com vídeo IA e passo a passo...
 
-## Instruções
-https://cherry-client-b8f.notion.site/CP2-WebDev-Presencial-282911d84e0d80dbaa6cd876dfd30119?pvs=73
-
-## Abaixo tem um print do Layout
-![Layout](./public/print-home.png)
-
-## Abaixo tem um GIF com a navegação completa
-![GIF do layout](./public/tela-cp2.gif)
+link: https://tuco2006.github.io/MachinePay.github.io/#/
 
